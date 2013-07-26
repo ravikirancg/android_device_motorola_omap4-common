@@ -418,6 +418,24 @@ def WriteFullOTAPackage(input_zip, output_zip):
 #  if "selinux_fc" in OPTIONS.info_dict:
 #    WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
+  script.Print("##################################");
+  script.Print("#  ____     ______   ____        #");
+  script.Print("# /\  _`\  /\  _  \ /\  _`\      #");
+  script.Print("# \ \ \L\ \\ \ \L\ \\ \ \/\_\    #");
+  script.Print("#  \ \ ,__/ \ \  __ \\ \ \/_/_   #");
+  script.Print("#   \ \ \/   \ \ \/\ \\ \ \L\ \  #");
+  script.Print("#    \ \_\    \ \_\ \_\\ \____/  #");
+  script.Print("#     \/_/     \/_/\/_/ \/___/   #");
+  script.Print("#                                #");
+  script.Print("#   ___ ___      __      ___     #");
+  script.Print("# /' __` __`\  /'__`\  /' _ `\   #");
+  script.Print("# /\ \/\ \/\ \/\ \L\.\_/\ \/\ \  #");
+  script.Print("# \ \_\ \_\ \_\ \__/.\_\ \_\ \_\ #");
+  script.Print("#  \/_/\/_/\/_/\/__/\/_/\/_/\/_/ #");
+  script.Print("#                                #");
+  script.Print("##################################"); 
+  
+
   script.Mount("/cache");
   script.DeleteRecursive("/cache");
   script.Mount("/data")  
@@ -459,6 +477,9 @@ def WriteFullOTAPackage(input_zip, output_zip):
 #  script.WriteRawImage("/boot", "boot.img")
 
   script.ShowProgress(0.1, 0)
+    
+  script.Print("Enjoy PAC-MAN ");
+
   script.Print("If you installed this in other than romslot-1")
   script.Print("it will not boot!!!!!! This will be fixed soon.")
   device_specific.FullOTA_InstallEnd()
